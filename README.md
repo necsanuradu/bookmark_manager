@@ -1,4 +1,4 @@
-## User stories and views for the BDD of Bookamrk_Challenge
+## User stories and views for the BDD of Bookmark_Challenge
 ```
 1.Show a list of bookmarks
   As a user
