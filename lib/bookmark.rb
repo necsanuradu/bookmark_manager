@@ -2,11 +2,15 @@ require "pg"
 
 class Bookmark
   DATABASE_NAME = "bookmark_manager"
+  DATABASE_NAME_TEST = "bookmark_manager_test"
   TABLE_NAME = "bookmarks"
+  attr_reader :db_connection
 
   def initialize(list = [])
     @list = list
-    @db_connection = db_connect(DATABASE_NAME)
+    db_name = DATABASE_NAME_TEST if ENV["RACK_ENV"] == "test"
+    db_name = DATABASE_NAME unless ENV["RACK_ENV"] == "test"
+    @db_connection = db_connect(db_name)
   end
 
   def all(field = "*", field_value = nil, table = TABLE_NAME)
@@ -22,7 +26,7 @@ class Bookmark
     list.map{ |value| value[@field] } if @field != "*"
   end
 
-  def db_connect(db_name = DATABASE_NAME)
+  def db_connect(db_name)
     PG.connect(dbname: db_name)
   end
 

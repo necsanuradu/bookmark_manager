@@ -4,6 +4,7 @@ require "sinatra/reloader"
 require './lib/bookmark.rb'
 
 class BookmarkManager < Sinatra::Base
+  attr_accessor :bookmarks
   configure :development do
     register Sinatra::Reloader
   end
@@ -14,8 +15,8 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/bookmarks' do
-    @bookmark = Bookmark.new
-    @list = @bookmark.all("url")
+    @bookmarks = Bookmark.new
+    @list = @bookmarks.all("url")
     erb(:bookmarks)
   end
 
