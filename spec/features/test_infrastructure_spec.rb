@@ -1,6 +1,6 @@
 feature 'test infrastructure' do
-  scenario 'loads as expected' do
+  scenario 'loads root page as expected' do
     visit('/')
-    expect(page).to have_content('makers')
+    expect(page).to have_title('BookmarkManager')
   end
 end

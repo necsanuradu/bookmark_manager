@@ -6,6 +6,8 @@ gem 'selenium-webdriver'
 gem "sinatra"
 gem "sinatra-contrib"
 gem "webrick"
+gem "nokogiri"
+gem "pg"
 
 group :test do
     gem 'capybara'
