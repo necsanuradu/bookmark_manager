@@ -1,8 +1,9 @@
 require "pg"
 
+ENV["DATABASE_NAME_TEST"] = "bookmark_manager_test"
 class Bookmark
   DATABASE_NAME = "bookmark_manager"
-  DATABASE_NAME_TEST = "bookmark_manager_test"
+  DATABASE_NAME_TEST = ENV["DATABASE_NAME_TEST"]
   TABLE_NAME = "bookmarks"
   attr_reader :db_connection
 
@@ -27,7 +28,11 @@ class Bookmark
   end
 
   def db_connect(db_name)
-    PG.connect(dbname: db_name)
+    db_connection = PG.connect(dbname: db_name)
+    reset_db_test_enviroment(db_connection) if db_name == DATABASE_NAME_TEST
+    return db_connection
   end
+
+
 
 end

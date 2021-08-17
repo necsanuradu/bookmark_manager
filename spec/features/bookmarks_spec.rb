@@ -2,7 +2,7 @@ require './spec/web_helpers.rb'
 require './lib/bookmark.rb'
 
 feature Bookmark do
-  # let(:list){ reset_bookmark_manager_test_db }
+  let(:list){ reset_bookmark_manager_test_db }
 
   scenario "load the bookmarks page as expected" do 
     visit('/bookmarks')
@@ -11,7 +11,7 @@ feature Bookmark do
 
   scenario "all 3 list initial urls should be present on the page" do 
     visit('/bookmarks')
-    list = reset_bookmark_manager_test_db 
+
     list.each do |value|
       expect(page).to have_content(value)
     end
