@@ -4,6 +4,10 @@
     <title>Bookmarks</title>
   </head>
   <body>
-    
+    <ul>
+    <% @list.each do |url| %>
+      <li><%= url %></li>
+    <% end %>
+    </ul>
   </body>
 </html>
