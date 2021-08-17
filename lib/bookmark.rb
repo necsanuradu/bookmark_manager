@@ -33,6 +33,4 @@ class Bookmark
     return db_connection
   end
 
-
-
 end

@@ -1,5 +1,5 @@
 def reset_bookmark_manager_test_db
-  test_grid = ["http://www.makersacademy.commmm/",
+  test_grid = ["http://www.makersacademy.com/",
                "http://www.google.com/",
                "http://www.destroyallsoftware.com"]
 end
