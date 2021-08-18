@@ -3,7 +3,7 @@ require './spec/web_helpers.rb'
 
 describe Bookmark do
 
-  let(:list){ reset_bookmark_manager_test_db }
+  let(:list){ get_test_grid_bookmark_manager_test_db }
 
   it "has method all" do
     expect(subject).to respond_to(:all)

@@ -2,7 +2,7 @@ require './spec/web_helpers.rb'
 require './lib/bookmark.rb'
 
 feature Bookmark do
-  let(:list){ reset_bookmark_manager_test_db }
+  let(:list){ get_test_grid_bookmark_manager_test_db }
 
   scenario "load the bookmarks page as expected" do 
     visit('/bookmarks')

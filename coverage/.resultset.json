@@ -28,16 +28,17 @@
       "/Users/radunecsanu/Desktop/Projects/Ruby/bookmark_manager/spec/web_helpers.rb": {
         "lines": [
           1,
-          9,
+          3,
           null,
           null,
+          3,
+          3,
           null,
           null,
           1,
-          6,
-          6,
-          6,
-          18,
+          3,
+          3,
+          9,
           null,
           null,
           null
@@ -89,6 +90,6 @@
         ]
       }
     },
-    "timestamp": 1629232256
+    "timestamp": 1629282293
   }
 }
