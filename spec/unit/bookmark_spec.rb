@@ -28,4 +28,10 @@ describe Bookmark do
     end
   end
 
+  it 'saves a bookmark to the database' do
+    new_url = 'https://www.facebook.com'
+    subject.create(new_url)
+    active_bookmarks = subject.all("url")
+    expect(active_bookmarks).to include(new_url)
+  end
 end

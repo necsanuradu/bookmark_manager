@@ -30,8 +30,10 @@ class Bookmark
 
   def db_connect(db_name)
     db_connection = PG.connect(dbname: db_name)
-    # ENV['DB_TEST_CONNECTION'] = db_connection if ENV["RACK_ENV"] == "test"
-    # return db_connection
+  end
+
+  def create(url)
+    @db_connection.exec("INSERT INTO bookmarks (url) VALUES('#{url}');")
   end
 
 end
