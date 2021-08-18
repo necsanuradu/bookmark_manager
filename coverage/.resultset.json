@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/ahsanrasul/Programming/bookmark_manager/spec/features/bookmarks_spec.rb": {
+      "/Users/radunecsanu/Desktop/Projects/Ruby/bookmark_manager/spec/features/bookmarks_spec.rb": {
         "lines": [
           1,
           1,
@@ -31,7 +31,7 @@
           null
         ]
       },
-      "/Users/ahsanrasul/Programming/bookmark_manager/spec/web_helpers.rb": {
+      "/Users/radunecsanu/Desktop/Projects/Ruby/bookmark_manager/spec/web_helpers.rb": {
         "lines": [
           1,
           3,
@@ -50,7 +50,7 @@
           null
         ]
       },
-      "/Users/ahsanrasul/Programming/bookmark_manager/spec/features/create_bookmark_spec.rb": {
+      "/Users/radunecsanu/Desktop/Projects/Ruby/bookmark_manager/spec/features/create_bookmark_spec.rb": {
         "lines": [
           1,
           null,
@@ -69,7 +69,7 @@
           null
         ]
       },
-      "/Users/ahsanrasul/Programming/bookmark_manager/spec/features/test_infrastructure_spec.rb": {
+      "/Users/radunecsanu/Desktop/Projects/Ruby/bookmark_manager/spec/features/test_infrastructure_spec.rb": {
         "lines": [
           1,
           1,
@@ -79,7 +79,7 @@
           null
         ]
       },
-      "/Users/ahsanrasul/Programming/bookmark_manager/spec/unit/bookmark_spec.rb": {
+      "/Users/radunecsanu/Desktop/Projects/Ruby/bookmark_manager/spec/unit/bookmark_spec.rb": {
         "lines": [
           1,
           1,
@@ -121,6 +121,6 @@
         ]
       }
     },
-    "timestamp": 1629307038
+    "timestamp": 1629309162
   }
 }

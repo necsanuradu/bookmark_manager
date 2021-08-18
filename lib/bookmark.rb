@@ -23,6 +23,7 @@ class Bookmark
   end
 
   def get_bookmarks(where_state = "")
+    @field.join!(" ,") if @field.respond_to?(:each)
     where_state << " WHERE " << @field_value[0] << " = '" << @field_value[1].to_s << "'" unless @field_value.nil? 
     list = @db_connection.exec("SELECT " << @field << " FROM " << @table << where_state << ";")
     list.map{ |value| value[@field] } if @field != "*"
