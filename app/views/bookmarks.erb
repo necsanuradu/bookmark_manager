@@ -2,9 +2,14 @@
 <html>
   <head>
     <title>Bookmarks</title>
+    <style>
+      hr{border-top: rgba(0, 0, 0, .1);}
+    </style>
   </head>
   <body>
     <a name="add_bookmark" href="/create_bookmark">Add bookmark</a>
+    <hr>
+    <h4>Bookmarks:</h4>
     <ul>
     <% @list.each do |bookmark| %>
       <li><a href="<%= bookmark['url'] %>"><%= bookmark['title'] %></a></li>

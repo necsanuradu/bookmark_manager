@@ -4,6 +4,7 @@
     <title>Create Bookmark</title>
     <style>
      h5, h4{text-align: center;}
+     h4{margin-bottom:2.25rem;}
      form{margin-top:2.5rem;}
      hr{border-top: rgba(0, 0, 0, .1);}
     </style>
@@ -12,9 +13,11 @@
     <form method="post" action="/save_bookmark">
       <h4>Add bookmark</h4>
       <hr>
-      <h5>URL: <input type="text" name="url" value=""/></h5>
-      <h5>Title: <input type="text" name="title" value=""/></h5>
+      <h5>title: <input type="text" name="title" value="" placeholder="bookmark title"/></h5>
+      <h5> URL:<input type="text" name="url" value="" placeholder="bookmark url"/></h5>
       <h5><input type="submit" name="submit"/></h5>
     </form>
+    <hr>
+    <h5><a href="/bookmarks">Back to bookmarks</a></h5>
   </body>
 </html>
