@@ -13,13 +13,14 @@ feature Bookmark do
     visit('/bookmarks')
 
     list.each do |value|
-      expect(page).to have_content(value)
+      expect(page.html).to include(value)
     end
   end
 
   scenario "check we can navigate to the create bookmark page" do
     visit("/bookmarks")
-    find("//a[name='add_bookmark']").click
+    # find("//a[name='add_bookmark']").click
+    click_link('Add bookmark')
     expect(page).to have_title("Create Bookmark")
   end
   

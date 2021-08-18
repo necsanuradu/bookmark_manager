@@ -6,8 +6,8 @@
   <body>
     <a name="add_bookmark" href="/create_bookmark">Add bookmark</a>
     <ul>
-    <% @list.each do |url| %>
-      <li><%= url %></li>
+    <% @list.each do |bookmark| %>
+      <li><a href="<%= bookmark['url'] %>"><%= bookmark['title'] %></a></li>
     <% end %>
     </ul>
   </body>

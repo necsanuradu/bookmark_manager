@@ -8,8 +8,9 @@ feature "allows saving of bookmarks" do
   scenario "can submit a bookmark to be saved" do
     visit('/create_bookmark')
     fill_in('url', with: 'https://www.facebook.com/')
+    fill_in('title', with: 'some')
     click_button('submit')
-    expect(page).to have_content('https://www.facebook.com/')
+    expect(page.html).to include('https://www.facebook.com/')
   end
 
 end

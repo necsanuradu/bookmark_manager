@@ -7,9 +7,9 @@ def get_test_grid_bookmark_manager_test_db
 end
 
 def reset_db_test_enviroment(test_grid = [], db_connection = PG.connect(dbname: ENV["DATABASE_NAME_TEST"]))
-  db_connection.exec("DELETE FROM bookmarks")
+  db_connection.exec("TRUNCATE TABLE bookmarks")
   test_grid.each do |test_value|
-    db_connection.exec("INSERT INTO bookmarks(url) VALUES('#{test_value}');")
+    db_connection.exec("INSERT INTO bookmarks(url, title) VALUES('#{test_value}', 'some');")
   end
 end
 

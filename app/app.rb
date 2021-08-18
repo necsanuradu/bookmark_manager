@@ -16,7 +16,7 @@ class BookmarkManager < Sinatra::Base
 
   get '/bookmarks' do
     @bookmarks = Bookmark.new
-    @list = @bookmarks.all("url")
+    @list = @bookmarks.all(["url", "title"])
     erb(:bookmarks)
   end
 
@@ -26,7 +26,7 @@ class BookmarkManager < Sinatra::Base
 
   post '/save_bookmark' do
     @bookmarks = Bookmark.new
-    @bookmarks.create(params[:url])
+    @bookmarks.create(params[:url], params[:title])
     redirect '/bookmarks'
   end
   run! if app_file ==$0
