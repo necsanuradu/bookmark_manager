@@ -16,5 +16,11 @@ feature Bookmark do
       expect(page).to have_content(value)
     end
   end
+
+  scenario "check we can navigate to the create bookmark page" do
+    visit("/bookmarks")
+    find("//a[name='add_bookmark']").click
+    expect(page).to have_title("Create Bookmark")
+  end
   
 end
