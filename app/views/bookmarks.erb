@@ -12,7 +12,7 @@
     <h4>Bookmarks:</h4>
     <ul>
     <% @list.each do |bookmark| %>
-      <li><a href="<%= bookmark['url'] %>"><%= bookmark['title'] %></a></li>
+      <li><a href="<%= bookmark.url %>"><%= bookmark.title %></a></li>
     <% end %>
     </ul>
   </body>

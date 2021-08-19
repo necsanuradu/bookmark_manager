@@ -24,7 +24,7 @@ describe Bookmark do
     active_bookmarks = subject.all("url")
     
     list.each do |url|
-      expect(active_bookmarks).to include(url)
+      expect(active_bookmarks.any? { |row| row.url == url } ).to eq(true)
     end
   end
 
@@ -32,6 +32,6 @@ describe Bookmark do
     new_url = 'https://www.facebook.com'
     subject.create(new_url)
     active_bookmarks = subject.all("url")
-    expect(active_bookmarks).to include(new_url)
+    expect(active_bookmarks.any? { |row| row.url == new_url }).to eq(true)
   end
 end

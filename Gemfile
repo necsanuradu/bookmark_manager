@@ -7,6 +7,7 @@ gem "sinatra"
 gem "sinatra-contrib"
 gem "webrick"
 gem "nokogiri"
+gem "rack"
 gem "pg"
 
 group :test do

@@ -1,4 +1,5 @@
 require "pg"
+require "./lib/post.rb"
 
 class Bookmark
   DATABASE_NAME = "bookmark_manager"
@@ -26,8 +27,7 @@ class Bookmark
     @field.respond_to?(:each) ? (fields = @field.join(", ")) : (fields = @field)
     where_state << " WHERE #{@field_value[0]} = '#{@field_value[1].to_s}'" unless @field_value.nil? 
     list = @db_connection.exec("SELECT #{fields} FROM #{@table}" << where_state << ";").to_a
-    list.map!{ |value| value[@field] } if ((@field != "*") && (!@field.respond_to?(:each)))
-    return list
+    list.map! { |row| Post.new(row) }
   end
 
   def db_connect(db_name)

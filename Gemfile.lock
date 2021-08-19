@@ -101,6 +101,7 @@ DEPENDENCIES
   capybara
   nokogiri
   pg
+  rack
   rspec
   rubocop (= 0.79.0)
   selenium-webdriver
